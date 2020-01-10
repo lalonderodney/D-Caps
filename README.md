@@ -14,7 +14,8 @@ Colorectal cancer, largely arising from precursor lesions called polyps, remains
 ## Colorectal Polyp Images Obtained From Colonoscopy Screenings
 
 <img src="imgs/PolypExample1Cropped.png" width="900px"/>
-* Typical cases on real-world ('in-the-wild') polyp diagnosis cases from the Mayo Polyp dataset. Left to right: hyperplastic, serrated, and adenoma, marked by blue arrows. *
+
+*Typical cases on real-world ('in-the-wild') polyp diagnosis cases from the Mayo Polyp dataset. Left to right: hyperplastic, serrated, and adenoma, marked by blue arrows.*
 
 
 **Research Gap:** Previous academic works have achieved remarkable success in this difficult task, with accuracy scores just exceeding 90%. **However, these methods have been applied to academic datasets which are highly unrealistic compared to a 'real-world' clinical setting.** For example, the most popular dataset in the literature is the ISIT-UMR Multimodal classification dataset, containing only 76 polyps. Each polyp is recorded up-close for approximately 30 seconds (nearly 800 videos frames) from multiple angles, modalities, and focus modes. Such time-consuming and ideal videos cannot be expected in more realistic 'in the wild' (i.e., real-world) clinical settings. To address this discrepancy between ideal academic datasets and real-world examples, we performed experiments on the significantly more challenging Mayo Polyp classification dataset, collected at the Mayo Clinic, Jacksonville by Wallace et al. with institutional review board approval. A total of 963 polyps from 552 patients were collected, where one image per imaging type of each polyp are chosen by expert interpreters. This dataset is extremely challenging, having only **single images per imaging mode per polyp**, large inter-polyp variation (e.g., scale, skew, illumination), and often only a single imaging mode provided, while also containing far more polyps collected from more patients than all previous AI-driven diagnosis studies in this area.
@@ -23,7 +24,8 @@ Colorectal cancer, largely arising from precursor lesions called polyps, remains
 ## D-Caps Framework Overview
 
 <img src="imgs/DCapsFrameworkCropped.png" width="900px"/>
-* D-Caps: Diagnosis capsule network architecture. Routing 1 or 3 refers to the number of routing iterations performed. *
+
+*D-Caps: Diagnosis capsule network architecture. Routing 1 or 3 refers to the number of routing iterations performed.*
 
 
 To accomplish our task and improve the viability of optical biopsy of colorectal polyps, we design a novel capsule network (D-Caps). Capsule networks provide equivariance to affine transformations on the input through encoding orientation information in vectorized feature representations, and we hypothesize that a capsule network can better model the high intra-class variation present in the Mayo Polyp dataset and provide superior results to a deep CNN. Our method introduces several technical novelties including (i) a novel deep capsule network architecture based on the locally-constrained routing introduced in (LaLonde and Bagci 2018), (ii) a capsule-average pooling (CAP) technique which allows us to perform classification on large image sizes, where the original fully-connected capsules of Sabour et al. are far too computationally expensive to fit in GPU memory, and (iii) improves the results over CNNs such as Inceptionv3 (Iv3) employed the previous state-of-the-art (Chen et al. 2018) by a significant margin, while also reducing the amount of parameters used by as much as 95%. We provide extensive analysis of results stratified across polyp categories, scanner types, imaging modalities, and focus modes to establish a new benchmark on this challenging, unexplored, large-scale dataset and promote future direction into the use of AI-driven colorectal cancer screening systems.
@@ -31,15 +33,18 @@ To accomplish our task and improve the viability of optical biopsy of colorectal
 ## Quantitative Results on Mayo Polyp Dataset
 
 <img src="imgs/Table1.png" width="900px"/>
-* Classifying Hyperplastic vs Adenoma polyps with D-Caps and Inceptionv3 measured by accuracy (acc), sensitivity (sen), and specificity (spe), where -F and -N denote far and near focus, respectively. *
+
+*Classifying Hyperplastic vs Adenoma polyps with D-Caps and Inceptionv3 measured by accuracy (acc), sensitivity (sen), and specificity (spe), where -F and -N denote far and near focus, respectively.*
 
 
 <img src="imgs/Table2.png" width="900px"/>
-* Classifying Hyperplastic vs Adenoma and Serrated polyps with D-Caps and Inceptionv3 measured by accuracy (acc), sensitivity (sen), and specificity (spe), where -F and -N denote far and near focus, respectively. *
+
+*Classifying Hyperplastic vs Adenoma and Serrated polyps with D-Caps and Inceptionv3 measured by accuracy (acc), sensitivity (sen), and specificity (spe), where -F and -N denote far and near focus, respectively.*
 
 
 <img src="imgs/Table3.png" width="900px"/>
-* Classifying Hyperplastic vs Serrated polyps with D-Caps and Inceptionv3 measured by accuracy (acc), sensitivity (sen), and specificity (spe), where -F and -N denote far and near focus, respectively. *
+
+*Classifying Hyperplastic vs Serrated polyps with D-Caps and Inceptionv3 measured by accuracy (acc), sensitivity (sen), and specificity (spe), where -F and -N denote far and near focus, respectively.*
 
 
 ## Results and Discussion
