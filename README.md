@@ -32,19 +32,19 @@ To accomplish our task and improve the viability of optical biopsy of colorectal
 
 ## Quantitative Results on Mayo Polyp Dataset
 
-<img src="imgs/Table1.png" width="900px"/>
-
 *Classifying Hyperplastic vs Adenoma polyps with D-Caps and Inceptionv3 measured by accuracy (acc), sensitivity (sen), and specificity (spe), where -F and -N denote far and near focus, respectively.*
 
+<img src="imgs/Table1.png" width="900px"/>
 
-<img src="imgs/Table2.png" width="900px"/>
 
 *Classifying Hyperplastic vs Adenoma and Serrated polyps with D-Caps and Inceptionv3 measured by accuracy (acc), sensitivity (sen), and specificity (spe), where -F and -N denote far and near focus, respectively.*
 
+<img src="imgs/Table2.png" width="900px"/>
 
-<img src="imgs/Table3.png" width="900px"/>
 
 *Classifying Hyperplastic vs Serrated polyps with D-Caps and Inceptionv3 measured by accuracy (acc), sensitivity (sen), and specificity (spe), where -F and -N denote far and near focus, respectively.*
+
+<img src="imgs/Table3.png" width="900px"/>
 
 
 ## Results and Discussion
