@@ -4,7 +4,7 @@
 
 ### The official code for the ISBI 2020 paper "Diagnosing Colorectal Polyps in the Wild with Capsule Networks" will be uploaded to this repository shortly. Watch/Star this repo to be updated on when the code is uploaded.
 
-The original paper can be found at ISBI 2020 or arXiv.
+The original paper can be found at ISBI 2020 or [arXiv](https://arxiv.org/abs/2001.03305).
 
 A project page for this work can be found at [my research blog](https://rodneylalonde.wixsite.com/personal/post/d-caps-diagnosis-capsules).
 
