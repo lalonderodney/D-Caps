@@ -51,6 +51,34 @@ To accomplish our task and improve the viability of optical biopsy of colorectal
 The results of the three sets of experiments in presented in Tables 1-3. For all experiments, we present results at several levels of analysis: All Images presents results for every image present in the dataset, while all other results are a weighted average taken across all votes for a given polyp (and imaging modality) to give a final diagnosis score. Looking at the All Polyps columns, we can see D-Caps outperforms Inceptionv3 in terms of relative accuracy increases of 17%, 27%, and 43% for experiments 1-3 (of increasing difficulty) respectively. 
 In our routing iteration ablation experiment, we obtained  50.61%, 65.53%, 45.97%, and 50.86% accuracy at the polyp level for 2, 3, 4, and 5 routing iterations respectively. Removing the reconstruction sub-network obtained 56%, 50%, and 55% accuracy at the for experiments 1-3 respectively, an average 8% decrease. Lastly on the ideal subset of physician chosen images, we obtained an accuracy of 82% for hyperplastic vs adenoma. These experiments show the dynamic routing and reconstruction both contribute to the overall performance of our model, while the latter experiment provides strong evidence that with further improvements in both capsule network algorithms and screening technology, AI-driven approaches can prove viable for raising optical biopsy techniques to clinical practice standards. Our work provides an important baseline for future studies on the extremely challenging Mayo Polyp dataset, and contributes further evidence that given limited data with high intra-class variation, capsule networks can significantly outperform deep CNNs.
 
+
+## Running the code
+1. [Optional] Create a virtual environment with anaconda and python 3.6 
+    ```bash
+    conda create -n your_env_name python=3.6
+    conda activate your_env_name
+    ```
+2. Clone this repository to whatever working directory you would like
+    ```bash
+    git clone https://github.com/lalonderodney/D-Caps.git
+    ```
+3. Change directories into the D-Caps directory
+    ```bash
+    cd D-Caps
+    ```
+4. Install the required packages (preferably in a virtual environment.)
+    ```bash
+    pip install -r requirements.txt
+    ```
+5. Ensure you have the Mayo dataset downloaded somewhere. If you wish to use another dataset, adjust the naming inside load_polyp_data.py
+
+6. Set the path to the Mayo Polyp dataset and run the code
+    ```bash
+    python main.py --data_root_dir /path/to/parent_dir/of/datasets --dataset "Mayo"
+    ```
+ 7. There are many more optional arguments within main.py. Give them a look, each one has a help string to explain what it is.
+
+
 ### Questions or Comments
 
 Please direct any questions or comments to me; I am happy to help in any way I can. You can either comment on the [project page](https://rodneylalonde.wixsite.com/personal/post/d-caps-diagnosis-capsules), or email me directly at lalonde@knights.ucf.edu.
