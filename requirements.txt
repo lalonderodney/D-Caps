@@ -1,4 +1,4 @@
-numpy==1.16.5
+numpy==1.22.0
 scipy==1.0.1
 matplotlib==2.2.2
 tqdm==4.23.0
